@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiaryLetter - 계정 삭제 안내</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #dc2626;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+        .warning-box {
+            background-color: #fef2f2;
+            border: 1px solid #fecaca;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #dc2626;
+            margin: 20px 0;
+        }
+        .step-box {
+            background-color: #eff6ff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+            margin: 20px 0;
+        }
+        .info-box {
+            background-color: #f0fdf4;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #22c55e;
+            margin: 20px 0;
+        }
+        .contact-box {
+            background-color: #fefce8;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #eab308;
+            margin: 20px 0;
+            text-align: center;
+        }
+        h2 {
+            color: #1f2937;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin: 15px 0;
+            padding: 15px;
+            background-color: #f9fafb;
+            border-radius: 8px;
+            border-left: 4px solid #6366f1;
+        }
+        .step-number {
+            background-color: #6366f1;
+            color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .step-content {
+            flex: 1;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight {
+            background-color: #fef3c7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .container { padding: 20px; }
+            h1 { font-size: 1.8em; }
+            .step { flex-direction: column; }
+            .step-number { margin-bottom: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗑️ DiaryLetter 계정 삭제 안내</h1>
+        <div class="subtitle">개발자: DiaryLetter 팀</div>
+
+        <div class="warning-box">
+            <h3>⚠️ 중요한 안내사항</h3>
+            <p><strong>계정을 삭제하면 모든 데이터가 영구적으로 삭제됩니다.</strong></p>
+            <p>삭제된 데이터는 <span class="highlight">복구할 수 없으니</span> 신중하게 결정해주세요.</p>
+        </div>
+
+        <h2>📋 계정 삭제 절차</h2>
+        <div class="step-box">
+            <p><strong>다음 단계를 따라 계정 삭제를 요청하실 수 있습니다:</strong></p>
+            
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <strong>DiaryLetter 앱 실행</strong><br>
+                    스마트폰에서 DiaryLetter 앱을 열어주세요.
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <strong>설정 메뉴 접근</strong><br>
+                    앱 내 '설정' → '계정 관리' 메뉴로 이동해주세요.
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <strong>계정 삭제 요청</strong><br>
+                    '계정 삭제' 버튼을 눌러 삭제를 요청해주세요.
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <strong>확인 및 처리</strong><br>
+                    요청 확인 후 <span class="highlight">즉시 삭제 처리</span>됩니다.
+                </div>
+            </div>
+        </div>
+
+        <h2>🗂️ 삭제되는 데이터</h2>
+        <div class="info-box">
+            <p><strong>계정 삭제 시 다음 정보가 즉시 영구 삭제됩니다:</strong></p>
+            <ul>
+                <li>📧 <strong>계정 정보:</strong> 이메일 주소, 프로필 정보</li>
+                <li>📝 <strong>일기 데이터:</strong> 작성한 모든 일기 및 내용</li>
+                <li>😊 <strong>감정 기록:</strong> 감정, 날씨, 활동, 사회적 상황 데이터</li>
+                <li>💌 <strong>AI 편지:</strong> 생성된 모든 편지 및 히스토리</li>
+                <li>⚙️ <strong>앱 설정:</strong> 테마, 폰트, 알림 설정</li>
+                <li>📊 <strong>사용 기록:</strong> 앱 내 모든 활동 기록</li>
+            </ul>
+        </div>
+
+        <h2>⏰ 데이터 보관 기간</h2>
+        <div class="info-box">
+            <p><strong>삭제 처리 방식:</strong></p>
+            <ul>
+                <li>✅ <strong>즉시 삭제:</strong> 대부분의 개인정보가 요청과 동시에 삭제됩니다</li>
+                <li>❌ <strong>추가 보관 없음:</strong> 법적 사유로 보관되는 데이터는 없습니다</li>
+                <li>🔒 <strong>완전 삭제:</strong> 백업 시스템에서도 30일 이내 완전 제거됩니다</li>
+            </ul>
+        </div>
+
+        <h2>❓ 계정 삭제가 어려운 경우</h2>
+        <div class="contact-box">
+            <h3>📞 고객 지원</h3>
+            <p>앱에서 계정 삭제가 어렵거나 추가 도움이 필요하시면 언제든 연락해주세요:</p>
+            <p><strong>📧 이메일:</strong> hpil331@gmail.com</p>
+            <p><strong>📋 포함 정보:</strong> 등록된 이메일 주소, 삭제 요청 사유</p>
+            <p>영업일 기준 <strong>2일 이내</strong>에 처리해드립니다.</p>
+        </div>
+
+        <h2>🔄 대안 옵션</h2>
+        <div class="step-box">
+            <p><strong>계정을 삭제하기 전에 고려해보세요:</strong></p>
+            <ul>
+                <li>📤 <strong>일기 백업:</strong> 소중한 일기를 먼저 백업하시겠어요?</li>
+                <li>🗑️ <strong>부분 삭제:</strong> 특정 일기나 데이터만 삭제하는 것은 어떨까요?</li>
+                <li>⏸️ <strong>잠시 휴식:</strong> 앱을 삭제하고 나중에 다시 사용하시는 것도 가능해요</li>
+            </ul>
+        </div>
+
+        <div class="warning-box">
+            <p><strong>💔 정말 아쉬워요!</strong></p>
+            <p>DiaryLetter와 함께했던 소중한 시간들이 있었을 텐데요. 더 나은 서비스로 다시 만날 수 있기를 바라겠습니다.</p>
+        </div>
+    </div>
+</body>
+</html>
