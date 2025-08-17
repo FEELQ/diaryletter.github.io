@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiaryLetter - データ削除ガイド</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #f59e0b;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+        .info-box {
+            background-color: #f0f9ff;
+            border: 1px solid #bae6fd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #0ea5e9;
+            margin: 20px 0;
+        }
+        .warning-box {
+            background-color: #fef2f2;
+            border: 1px solid #fecaca;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #dc2626;
+            margin: 20px 0;
+        }
+        .step-box {
+            background-color: #eff6ff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+            margin: 20px 0;
+        }
+        .option-box {
+            background-color: #f0fdf4;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #22c55e;
+            margin: 20px 0;
+        }
+        .contact-box {
+            background-color: #fefce8;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #eab308;
+            margin: 20px 0;
+            text-align: center;
+        }
+        h2 {
+            color: #1f2937;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin: 15px 0;
+            padding: 15px;
+            background-color: #f9fafb;
+            border-radius: 8px;
+            border-left: 4px solid #6366f1;
+        }
+        .step-number {
+            background-color: #6366f1;
+            color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .step-content {
+            flex: 1;
+        }
+        .data-option {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            padding: 12px;
+            background-color: #f8fafc;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+        .data-icon {
+            font-size: 1.5em;
+            margin-right: 12px;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight {
+            background-color: #fef3c7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .tab-container {
+            display: flex;
+            border-bottom: 2px solid #e5e7eb;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            color: #6b7280;
+            font-weight: 500;
+        }
+        .tab.active {
+            color: #6366f1;
+            border-bottom-color: #6366f1;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .container { padding: 20px; }
+            h1 { font-size: 1.8em; }
+            .step { flex-direction: column; }
+            .step-number { margin-bottom: 10px; }
+            .data-option { flex-direction: column; text-align: center; }
+            .data-icon { margin-bottom: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗂️ DiaryLetter データ削除ガイド</h1>
+        <div class="subtitle">開発者: DiaryLetter チーム</div>
+
+        <div class="info-box">
+            <h3>💡 データ削除サービス</h3>
+            <p>アカウントを維持しながら<strong>特定のデータのみを削除</strong>することができます。</p>
+            <p>必要に応じて一部または全体のデータを選択的に管理してください。</p>
+        </div>
+
+        <h2>🎯 選択的データ削除オプション</h2>
+        <div class="option-box">
+            <p><strong>削除可能なデータタイプ：</strong></p>
+            
+            <div class="data-option">
+                <div class="data-icon">📝</div>
+                <div>
+                    <strong>特定の日記削除</strong><br>
+                    <small>個別の日記や特定期間の日記のみ削除</small>
+                </div>
+            </div>
+
+            <div class="data-option">
+                <div class="data-icon">💌</div>
+                <div>
+                    <strong>AI手紙削除</strong><br>
+                    <small>生成された手紙の中から希望するもののみ選択削除</small>
+                </div>
+            </div>
+
+            <div class="data-option">
+                <div class="data-icon">😊</div>
+                <div>
+                    <strong>感情データ削除</strong><br>
+                    <small>感情、天気、活動記録データの削除</small>
+                </div>
+            </div>
+
+            <div class="data-option">
+                <div class="data-icon">⚙️</div>
+                <div>
+                    <strong>設定初期化</strong><br>
+                    <small>テーマ、フォント、通知設定をデフォルト値に復元</small>
+                </div>
+            </div>
+
+            <div class="data-option">
+                <div class="data-icon">🗑️</div>
+                <div>
+                    <strong>全データ削除</strong><br>
+                    <small>アカウントは維持し、すべてのコンテンツのみ削除</small>
+                </div>
+            </div>
+        </div>
+
+        <h2>📋 データ削除手順</h2>
+        <div class="tab-container">
+            <div class="tab active" onclick="showTab('app')">アプリで削除</div>
+            <div class="tab" onclick="showTab('email')">メール依頼</div>
+        </div>
+
+        <div id="app-tab" class="tab-content active">
+            <div class="step-box">
+                <p><strong>アプリで直接削除：</strong></p>
+                
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <strong>DiaryLetterアプリ起動</strong><br>
+                        スマートフォンでDiaryLetterアプリを開いてください。
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <strong>削除するデータを選択</strong><br>
+                        • 個別日記：日記リストで長押し<br>
+                        • 手紙：手紙リストで削除ボタン<br>
+                        • 設定：「設定」→「データ管理」メニュー
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <strong>削除確認</strong><br>
+                        削除確認画面で「削除」を押して完了してください。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="email-tab" class="tab-content">
+            <div class="contact-box">
+                <h3>📧 メールで削除依頼</h3>
+                <p><strong>以下の情報を含めてご依頼ください：</strong></p>
+                <ul style="text-align: left; max-width: 400px; margin: 0 auto;">
+                    <li>📧 登録されたメールアドレス</li>
+                    <li>🗑️ 削除するデータタイプ</li>
+                    <li>📅 削除範囲（特定期間など）</li>
+                    <li>📝 削除理由（任意）</li>
+                </ul>
+                <p><strong>📧 メール：</strong> hpil331@gmail.com</p>
+                <p><strong>📋 処理時間：</strong> 営業日基準2日以内</p>
+            </div>
+        </div>
+
+        <h2>⏰ 削除処理および保管期間</h2>
+        <div class="info-box">
+            <p><strong>削除処理方式：</strong></p>
+            <ul>
+                <li>✅ <strong>即時削除：</strong> アプリで削除したデータは即座に削除されます</li>
+                <li>📧 <strong>メール依頼：</strong> 2日以内に検討後、削除処理されます</li>
+                <li>🔒 <strong>バックアップ除去：</strong> システムバックアップから30日以内に完全削除</li>
+                <li>❌ <strong>法的保管：</strong> 法的事由で保管されるデータなし</li>
+            </ul>
+        </div>
+
+        <h2>🔄 削除後の復旧</h2>
+        <div class="warning-box">
+            <h3>⚠️ 重要なご案内</h3>
+            <ul>
+                <li>🚫 <strong>復旧不可：</strong> 削除されたデータは復旧できません</li>
+                <li>💾 <strong>バックアップ推奨：</strong> 重要なデータは事前にバックアップしてください</li>
+                <li>⏳ <strong>慎重な決定：</strong> 削除前に十分ご検討ください</li>
+            </ul>
+        </div>
+
+        <h2>❓ よくある質問</h2>
+        <div class="step-box">
+            <p><strong>Q: 一部の日記だけ削除して残りは維持できますか？</strong></p>
+            <p>A: はい、可能です。アプリで個別の日記を選択して削除するか、特定期間の日記のみ削除依頼することができます。</p>
+            
+            <p><strong>Q: AI手紙だけ削除して日記は残せますか？</strong></p>
+            <p>A: はい、手紙ボックスで個別の手紙を削除するか、すべての手紙のみ選択的に削除することができます。</p>
+            
+            <p><strong>Q: 削除したデータは本当に完全に消えますか？</strong></p>
+            <p>A: はい、即座に削除され、バックアップシステムからも30日以内に完全に削除されます。</p>
+        </div>
+
+        <div class="info-box">
+            <p><strong>🎯 カスタマイズデータ管理</strong></p>
+            <p>DiaryLetterはユーザーのプライバシーを尊重し、必要に応じて柔軟にデータを管理できるよう支援します。</p>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+            
+            // Remove active class from all tabs
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Show selected tab content
+            document.getElementById(tabName + '-tab').classList.add('active');
+            
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>

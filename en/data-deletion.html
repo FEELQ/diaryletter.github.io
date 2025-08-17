@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiaryLetter - Data Deletion Guide</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #f59e0b;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+        .info-box {
+            background-color: #f0f9ff;
+            border: 1px solid #bae6fd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #0ea5e9;
+            margin: 20px 0;
+        }
+        .warning-box {
+            background-color: #fef2f2;
+            border: 1px solid #fecaca;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #dc2626;
+            margin: 20px 0;
+        }
+        .step-box {
+            background-color: #eff6ff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+            margin: 20px 0;
+        }
+        .option-box {
+            background-color: #f0fdf4;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #22c55e;
+            margin: 20px 0;
+        }
+        .contact-box {
+            background-color: #fefce8;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #eab308;
+            margin: 20px 0;
+            text-align: center;
+        }
+        h2 {
+            color: #1f2937;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin: 15px 0;
+            padding: 15px;
+            background-color: #f9fafb;
+            border-radius: 8px;
+            border-left: 4px solid #6366f1;
+        }
+        .step-number {
+            background-color: #6366f1;
+            color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .step-content {
+            flex: 1;
+        }
+        .data-option {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            padding: 12px;
+            background-color: #f8fafc;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+        .data-icon {
+            font-size: 1.5em;
+            margin-right: 12px;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight {
+            background-color: #fef3c7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .tab-container {
+            display: flex;
+            border-bottom: 2px solid #e5e7eb;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            color: #6b7280;
+            font-weight: 500;
+        }
+        .tab.active {
+            color: #6366f1;
+            border-bottom-color: #6366f1;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .container { padding: 20px; }
+            h1 { font-size: 1.8em; }
+            .step { flex-direction: column; }
+            .step-number { margin-bottom: 10px; }
+            .data-option { flex-direction: column; text-align: center; }
+            .data-icon { margin-bottom: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗂️ DiaryLetter Data Deletion Guide</h1>
+        <div class="subtitle">Developer: DiaryLetter Team</div>
+
+        <div class="info-box">
+            <h3>💡 Data Deletion Service</h3>
+            <p>You can <strong>delete specific data only</strong> while keeping your account.</p>
+            <p>Selectively manage some or all data as needed.</p>
+        </div>
+
+        <h2>🎯 Selective Data Deletion Options</h2>
+        <div class="option-box">
+            <p><strong>Types of data that can be deleted:</strong></p>
+            
+            <div class="data-option">
+                <div class="data-icon">📝</div>
+                <div>
+                    <strong>Delete Specific Diaries</strong><br>
+                    <small>Delete individual diaries or diaries from specific periods</small>
+                </div>
+            </div>
+
+            <div class="data-option">
+                <div class="data-icon">💌</div>
+                <div>
+                    <strong>Delete AI Letters</strong><br>
+                    <small>Selectively delete only the generated letters you want</small>
+                </div>
+            </div>
+
+            <div class="data-option">
+                <div class="data-icon">😊</div>
+                <div>
+                    <strong>Delete Emotion Data</strong><br>
+                    <small>Delete emotion, weather, and activity record data</small>
+                </div>
+            </div>
+
+            <div class="data-option">
+                <div class="data-icon">⚙️</div>
+                <div>
+                    <strong>Reset Settings</strong><br>
+                    <small>Restore theme, font, and notification settings to defaults</small>
+                </div>
+            </div>
+
+            <div class="data-option">
+                <div class="data-icon">🗑️</div>
+                <div>
+                    <strong>Delete All Data</strong><br>
+                    <small>Keep account but delete all content only</small>
+                </div>
+            </div>
+        </div>
+
+        <h2>📋 Data Deletion Procedure</h2>
+        <div class="tab-container">
+            <div class="tab active" onclick="showTab('app')">Delete in App</div>
+            <div class="tab" onclick="showTab('email')">Email Request</div>
+        </div>
+
+        <div id="app-tab" class="tab-content active">
+            <div class="step-box">
+                <p><strong>Delete directly in the app:</strong></p>
+                
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <strong>Open DiaryLetter App</strong><br>
+                        Please open the DiaryLetter app on your smartphone.
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <strong>Select Data to Delete</strong><br>
+                        • Individual diary: Long press in diary list<br>
+                        • Letter box: Delete button in letter list<br>
+                        • Settings: 'Settings' → 'Data Management' menu
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <strong>Confirm Deletion</strong><br>
+                        Please press 'Delete' in the deletion confirmation window to complete.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="email-tab" class="tab-content">
+            <div class="contact-box">
+                <h3>📧 Request Deletion via Email</h3>
+                <p><strong>Please include the following information in your request:</strong></p>
+                <ul style="text-align: left; max-width: 400px; margin: 0 auto;">
+                    <li>📧 Registered email address</li>
+                    <li>🗑️ Type of data to delete</li>
+                    <li>📅 Deletion scope (specific period, etc.)</li>
+                    <li>📝 Reason for deletion (optional)</li>
+                </ul>
+                <p><strong>📧 Email:</strong> hpil331@gmail.com</p>
+                <p><strong>📋 Processing Time:</strong> Within 2 business days</p>
+            </div>
+        </div>
+
+        <h2>⏰ Deletion Processing and Retention Period</h2>
+        <div class="info-box">
+            <p><strong>Deletion Processing Method:</strong></p>
+            <ul>
+                <li>✅ <strong>Immediate Deletion:</strong> Data deleted in the app is removed immediately</li>
+                <li>📧 <strong>Email Request:</strong> Processed within 2 days after review</li>
+                <li>🔒 <strong>Backup Removal:</strong> Complete removal from system backups within 30 days</li>
+                <li>❌ <strong>Legal Retention:</strong> No data retained for legal reasons</li>
+            </ul>
+        </div>
+
+        <h2>🔄 Recovery After Deletion</h2>
+        <div class="warning-box">
+            <h3>⚠️ Important Notice</h3>
+            <ul>
+                <li>🚫 <strong>No Recovery:</strong> Deleted data cannot be recovered</li>
+                <li>💾 <strong>Backup Recommended:</strong> Please backup important data in advance</li>
+                <li>⏳ <strong>Careful Decision:</strong> Please consider carefully before deletion</li>
+            </ul>
+        </div>
+
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="step-box">
+            <p><strong>Q: Can I delete only some diaries and keep the rest?</strong></p>
+            <p>A: Yes, it's possible. You can select individual diaries to delete in the app, or request deletion of diaries from specific periods only.</p>
+            
+            <p><strong>Q: Can I delete only AI letters and keep the diaries?</strong></p>
+            <p>A: Yes, you can delete individual letters from the letter box, or selectively delete all letters only.</p>
+            
+            <p><strong>Q: Is the deleted data really completely gone?</strong></p>
+            <p>A: Yes, it's deleted immediately and completely removed from backup systems within 30 days.</p>
+        </div>
+
+        <div class="info-box">
+            <p><strong>🎯 Customized Data Management</strong></p>
+            <p>DiaryLetter respects user privacy and supports flexible data management according to your needs.</p>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+            
+            // Remove active class from all tabs
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Show selected tab content
+            document.getElementById(tabName + '-tab').classList.add('active');
+            
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
